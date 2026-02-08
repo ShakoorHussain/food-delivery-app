@@ -70,7 +70,7 @@ const DeliveryDashboard = () => {
   const fetchOptimizedRoute = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/delivery/route/optimize",
+        "https://food-delivery-backend-fiuj.onrender.com/api/delivery/route/optimize",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -94,7 +94,7 @@ const DeliveryDashboard = () => {
     setError("");
     try {
       const response = await fetch(
-        "http://localhost:5000/api/delivery/orders",
+        "https://food-delivery-backend-fiuj.onrender.com/api/delivery/orders",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -125,7 +125,7 @@ const DeliveryDashboard = () => {
   const updateDeliveryStatus = async (orderId, newStatus) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/delivery/orders/${orderId}/status`,
+        `https://food-delivery-backend-fiuj.onrender.com/api/delivery/orders/${orderId}/status`,
         {
           method: "PUT",
           headers: {

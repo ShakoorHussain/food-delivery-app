@@ -25,7 +25,7 @@ const [showMap, setShowMap] = useState(false);
     setLoading(true);
     setError('');
     try {
-      let url = 'http://localhost:5000/api/restaurants?';
+      let url = 'https://food-delivery-backend-fiuj.onrender.com/api/restaurants?';
       if (selectedCuisine) url += `cuisine=${selectedCuisine}&`;
       if (minRating) url += `minRating=${minRating}`;
 

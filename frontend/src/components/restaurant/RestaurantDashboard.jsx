@@ -82,7 +82,7 @@ const RestaurantDashboard = () => {
 
   const fetchRestaurantProfile = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/restaurants', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/restaurants', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -103,7 +103,7 @@ const RestaurantDashboard = () => {
   const fetchMenuItems = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/menu/restaurant/${restaurantId}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/menu/restaurant/${restaurantId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -123,7 +123,7 @@ const RestaurantDashboard = () => {
   const fetchOrders = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/orders/restaurant', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/orders/restaurant', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -149,7 +149,7 @@ const RestaurantDashboard = () => {
 
   const fetchDeliveryAgents = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/delivery/agents', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/delivery/agents', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -166,7 +166,7 @@ const RestaurantDashboard = () => {
 
   const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/orders/${orderId}/status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ const RestaurantDashboard = () => {
 
     setAssigning(true);
     try {
-      const response = await fetch('http://localhost:5000/api/delivery/assign', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/delivery/assign', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -245,7 +245,7 @@ const RestaurantDashboard = () => {
     if (!window.confirm('Are you sure you want to delete this item?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/menu/${itemId}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/menu/${itemId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,

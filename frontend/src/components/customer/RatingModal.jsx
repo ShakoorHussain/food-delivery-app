@@ -17,7 +17,7 @@ const RatingModal = ({ order, onClose, onSubmit }) => {
 
     setSubmitting(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/ratings/${order._id}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/ratings/${order._id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

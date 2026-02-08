@@ -43,7 +43,7 @@ const EditMenuItem = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch(`http://localhost:5000/api/menu/item/${id}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/menu/item/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -179,7 +179,7 @@ const EditMenuItem = () => {
         imageData = '';
       }
 
-      const response = await fetch(`http://localhost:5000/api/menu/${id}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/menu/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

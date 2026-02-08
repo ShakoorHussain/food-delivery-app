@@ -99,7 +99,7 @@ const OrderHistory = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('http://localhost:5000/api/orders/customer/history', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/orders/customer/history', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },

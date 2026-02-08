@@ -29,7 +29,7 @@ export const SocketProvider = ({ children }) => {
     }
 
     // Create socket connection
-    const newSocket = io('http://localhost:5000', {
+    const newSocket = io('https://food-delivery-backend-fiuj.onrender.com', {
       transports: ['websocket'],
       reconnection: true,
       reconnectionDelay: 1000,

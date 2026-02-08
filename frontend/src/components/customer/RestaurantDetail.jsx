@@ -21,7 +21,7 @@ const RestaurantDetail = () => {
   const fetchRestaurantDetails = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/api/restaurants/${id}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/restaurants/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -49,7 +49,7 @@ const RestaurantDetail = () => {
 
   const fetchMenu = async (restaurantId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/menu/restaurant/${restaurantId}`, {
+      const response = await fetch(`https://food-delivery-backend-fiuj.onrender.com/api/menu/restaurant/${restaurantId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -77,7 +77,7 @@ const RestaurantDetail = () => {
     const quantity = quantities[menuItem._id] || 1;
 
     try {
-      const response = await fetch('http://localhost:5000/api/customer/cart', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/customer/cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

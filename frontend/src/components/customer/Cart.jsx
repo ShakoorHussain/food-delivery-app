@@ -26,7 +26,7 @@ const Cart = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:5000/api/customer/cart', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/customer/cart', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -74,7 +74,7 @@ const Cart = () => {
       const token = localStorage.getItem('token');
 
       // Remove old item
-      await fetch('http://localhost:5000/api/customer/cart', {
+      await fetch('https://food-delivery-backend-fiuj.onrender.com/api/customer/cart', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ const Cart = () => {
       });
 
       // Add with new quantity
-      const response = await fetch('http://localhost:5000/api/customer/cart', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/customer/cart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ const Cart = () => {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await fetch('http://localhost:5000/api/customer/cart', {
+      const response = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/customer/cart', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const placeOrder = async () => {
       const token = localStorage.getItem('token');
 
       // Place order
-      const orderResponse = await fetch('http://localhost:5000/api/orders/place', {
+      const orderResponse = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/orders/place', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -172,7 +172,7 @@ const placeOrder = async () => {
       // Calculate ETA (assume 5km distance, adjust as needed)
       const distanceKm = 5; // You can make this dynamic based on restaurant location
       try {
-        await fetch('http://localhost:5000/api/eta', {
+        await fetch('https://food-delivery-backend-fiuj.onrender.com/api/eta', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ const placeOrder = async () => {
       }
 
       // Simulate payment
-      const paymentResponse = await fetch('http://localhost:5000/api/payment', {
+      const paymentResponse = await fetch('https://food-delivery-backend-fiuj.onrender.com/api/payment', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
