@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, Star, ShoppingCart, LogOut, MapPin, Clock, Package } from 'lucide-react';
-import { useAuth } from '../auth/Authcontext';
+import { useAuth } from './auth/Authcontext';
 import MapView from '../shared/MapView';
 const RestaurantList = () => {
   const navigate = useNavigate();
