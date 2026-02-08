@@ -31,6 +31,7 @@ app.use('/api/test', (req, res) => {
   console.log('backend working...');
   res.send('Backend working...');
 });
+
 app.use('/api/ratings', ratingRoutes);
 app.use('/api/restaurants', restaurantRoutes);
 app.use('/api/auth', authRoutes);
@@ -45,7 +46,25 @@ app.use('/api/eta', etaRoutes);
 app.get('/api/test', (req, res) => {
   res.send('Backend is running');
 });
-
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Food Delivery API',
+    status: 'running',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      restaurants: '/api/restaurants',
+      menu: '/api/menu',
+      orders: '/api/orders',
+      customer: '/api/customer',
+      delivery: '/api/delivery',
+      payment: '/api/payment',
+      eta: '/api/eta',
+      ratings: '/api/ratings',
+      test: '/api/test'
+    }
+  });
+});
 // Connect to MongoDB
 connectDB();
 
