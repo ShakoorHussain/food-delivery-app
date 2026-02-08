@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, Package, ShoppingBag, PlusCircle, Edit, Trash2, Truck, X } from 'lucide-react';
-import { useAuth } from '../auth/Authcontext';
-import { useSocket } from '../auth/SocketContext';
+import { useAuth } from '../auth/authContext';
+import { useSocket } from '../auth/socketContext';
 
 const RestaurantDashboard = () => {
   const navigate = useNavigate();

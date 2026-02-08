@@ -8,8 +8,8 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
-import { useAuth } from "../auth/AuthContext";
-import { useSocket } from "../auth/SocketContext";
+import { useAuth } from '../auth/authContext';
+import { useSocket } from "../auth/socketContext";
 import MapView from "../shared/MapView";
 
 const DeliveryDashboard = () => {

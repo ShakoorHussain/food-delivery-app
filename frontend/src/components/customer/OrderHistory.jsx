@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Package, Clock, CheckCircle, XCircle, Truck, ShoppingCart, Star } from 'lucide-react';
-import { useAuth } from './auth/Authcontext';
-import { useSocket } from '../auth/SocketContext';
+import { useAuth } from '../auth/authContext';
+import { useSocket } from '../auth/socketContext';
 import RatingModal from './RatingModal';
 
 const OrderHistory = () => {

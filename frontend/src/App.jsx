@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { AuthProvider } from './components/auth/Authcontext';
-import { SocketProvider } from './components/auth/Socketcontext';
+import { AuthProvider } from './components/auth/authContext';
+import { SocketProvider } from './components/auth/socketContext';
 import ProtectedRoute from './components/shared/ProtectedRoute';
 
 // Auth Components
