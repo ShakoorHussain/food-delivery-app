@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ShoppingCart } from 'lucide-react';
-import { useAuth } from './Authcontext';
+import { useAuth } from '..auth/Authcontext';
 
 const LoginPage = () => {
   const navigate = useNavigate();
