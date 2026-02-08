@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Star, MapPin, Clock, ShoppingCart, Plus, Minus } from 'lucide-react';
-import { useAuth } from '../auth/Authcontext';
+import { useAuth } from '../auth/AuthContext';
 
 const RestaurantDetail = () => {
   const { id } = useParams();

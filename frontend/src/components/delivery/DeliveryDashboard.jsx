@@ -8,7 +8,7 @@ import {
   Clock,
   CheckCircle,
 } from "lucide-react";
-import { useAuth } from "../auth/Authcontext";
+import { useAuth } from "../auth/AuthContext";
 import { useSocket } from "../auth/SocketContext";
 import MapView from "../shared/MapView";
 
