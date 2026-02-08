@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Package, DollarSign, FileText, Tag, Upload, X } from 'lucide-react';
-import { useAuth } from '../auth/AuthContext';
+import { useAuth } from '../auth/Authcontext';
 
 const AddMenuItem = () => {
   const navigate = useNavigate();
